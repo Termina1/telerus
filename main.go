@@ -6,6 +6,7 @@ import "strings"
 import "errors"
 import "net"
 import "strconv"
+import "fmt"
 
 type verifier func(string, bool) (string, error)
 
@@ -88,6 +89,7 @@ func main() {
 		panic(err)
 	}
 
+	fmt.Println("Listening on " + address + ":" + port)
 	if err := server.ListenAndServe(protocol, address+":"+port); err != nil {
 		panic(err)
 	}
