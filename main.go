@@ -6,7 +6,6 @@ import "strings"
 import "errors"
 import "net"
 import "strconv"
-import "fmt"
 
 type verifier func(string, bool) (string, error)
 
